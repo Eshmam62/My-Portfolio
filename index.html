@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md. Eshmam Ahmed Rofi - Portfolio</title>
+    
+    <!-- 🚀 SEO Meta Tags -->
+    <title>Eshmam Ahmed Rofi | Portfolio</title>
+    <meta name="description" content="Official portfolio of Eshmam Ahmed Rofi. Full-Stack Developer & Software Engineer.">
+    <meta name="keywords" content="Eshmam Ahmed Rofi, eshmamahmed62, portfolio, AIUB, Software Developer, Full-Stack Developer">
+    <meta name="author" content="Md. Eshmam Ahmed Rofi">
+
+    <!-- Stylesheets & Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;600;700&display=swap" rel="stylesheet">
@@ -20,6 +27,7 @@
         body {
             background-color: #0b0f19;
             color: #e2e8f0;
+            overflow-x: hidden;
         }
 
         /* Navbar Style */
@@ -28,8 +36,8 @@
             top: 0;
             left: 0;
             width: 100%;
-            padding: 20px 10%;
-            background: rgba(11, 15, 25, 0.9);
+            padding: 20px 8%;
+            background: rgba(11, 15, 25, 0.95);
             backdrop-filter: blur(10px);
             display: flex;
             justify-content: space-between;
@@ -55,7 +63,7 @@
             color: #e2e8f0;
             text-decoration: none;
             font-weight: 500;
-            margin-left: 35px;
+            margin-left: 30px;
             transition: color 0.3s ease, text-shadow 0.3s ease;
         }
 
@@ -67,11 +75,15 @@
         .navbar a.nav-cv-btn {
             background: rgba(0, 242, 254, 0.1);
             border: 1px solid #00f2fe;
-            padding: 6px 15px;
+            padding: 6px 18px;
             border-radius: 20px;
             box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
             text-shadow: none !important;
             cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .navbar a.nav-cv-btn:hover, .navbar a.nav-cv-btn.active {
@@ -83,7 +95,7 @@
         /* Section Common Style */
         section {
             min-height: 100vh;
-            padding: 140px 10% 60px;
+            padding: 120px 8% 60px;
         }
 
         .heading {
@@ -105,15 +117,20 @@
             gap: 50px;
         }
 
+        .home-content {
+            flex: 1;
+        }
+
         .home-content h3 {
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 700;
         }
 
         .home-content h1 {
-            font-size: 56px;
+            font-size: 52px;
             font-weight: 700;
-            margin: -3px 0 10px;
+            margin: 5px 0;
+            line-height: 1.2;
         }
 
         .home-content p {
@@ -133,11 +150,11 @@
         .text-animate-wrapper {
             display: flex;
             flex-direction: column;
-            animation: moveText 7.5s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+            animation: moveText 5s cubic-bezier(0.25, 1, 0.5, 1) infinite;
         }
 
         .text-animate h3 {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 700;
             color: #00f2fe;
             text-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
@@ -147,22 +164,21 @@
         }
 
         @keyframes moveText {
-            0%, 28% { transform: translateY(0); }
-            33%, 61% { transform: translateY(-42px); }
-            66%, 95% { transform: translateY(-84px); }
+            0%, 45% { transform: translateY(0); }
+            50%, 95% { transform: translateY(-42px); }
             100% { transform: translateY(0); }
         }
 
         /* Profile Image Box */
         .profile-img-box {
             position: relative;
-            width: 350px;
-            height: 350px;
+            width: 320px;
+            height: 320px;
             border-radius: 50%;
             padding: 5px;
             background: linear-gradient(45deg, #00f2fe, #4facfe);
             box-shadow: 0 0 25px #00f2fe;
-            overflow: hidden;
+            flex-shrink: 0;
         }
 
         .profile-img-box img {
@@ -251,6 +267,7 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
+            flex-wrap: wrap;
         }
 
         .about-info-list li i {
@@ -274,7 +291,7 @@
         /* Skills Section */
         .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
 
@@ -288,7 +305,7 @@
         }
 
         .skills-box:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
             border-color: #00f2fe;
             box-shadow: 0 0 20px rgba(0, 242, 254, 0.1);
         }
@@ -347,7 +364,7 @@
 
         .project-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
@@ -364,7 +381,7 @@
         }
 
         .project-box:hover {
-            transform: scale(1.03);
+            transform: scale(1.02);
             border-color: #00f2fe;
             box-shadow: 0 0 25px rgba(0, 242, 254, 0.2);
         }
@@ -415,20 +432,7 @@
             transition: 0.3s;
         }
 
-        .project-link:hover {
-            text-shadow: 0 0 10px #00f2fe;
-            transform: scale(1.2);
-        }
-
-        .loading-text {
-            text-align: center;
-            color: #64748b;
-            font-size: 16px;
-            grid-column: 1 / -1;
-            padding: 40px 0;
-        }
-
-        /* Contact Section Info Cards Design */
+        /* Contact Section */
         .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -453,7 +457,7 @@
         }
 
         .contact-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
             border-color: #00f2fe;
             box-shadow: 0 0 25px rgba(0, 242, 254, 0.2);
         }
@@ -461,19 +465,12 @@
         .contact-card i {
             font-size: 45px;
             color: #00f2fe;
-            text-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
             transition: 0.3s;
-        }
-
-        .contact-card:hover i {
-            transform: scale(1.1);
-            text-shadow: 0 0 15px #00f2fe;
         }
 
         .contact-card h3 {
             font-size: 20px;
             font-weight: 600;
-            color: #e2e8f0;
         }
 
         .contact-card p {
@@ -486,7 +483,51 @@
             font-size: 13px;
             color: #00f2fe;
             font-weight: 500;
-            margin-top: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #0b0f19;
+            border-top: 1px solid rgba(0, 242, 254, 0.05);
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        /* Responsive Media Queries */
+        @media (max-width: 992px) {
+            header { padding: 15px 5%; }
+            section { padding: 100px 5% 50px; }
+            .home {
+                flex-direction: column-reverse;
+                text-align: center;
+                justify-content: center;
+                gap: 30px;
+            }
+            .home-content h1 { font-size: 40px; }
+            .home-content p { margin: 0 auto; }
+            .text-animate { display: flex; justify-content: center; }
+            .social-media a { margin: 20px 10px; }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px 2%;
+                position: relative;
+            }
+            .navbar {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px 15px;
+            }
+            .navbar a { margin-left: 0; font-size: 14px; }
+            section { padding: 40px 4% 40px; min-height: auto; }
+            .heading { font-size: 28px; margin-bottom: 30px; }
+            .home-content h1 { font-size: 32px; }
+            .profile-img-box { width: 240px; height: 240px; }
+            .about-content p { font-size: 15px; }
         }
     </style>
 </head>
@@ -500,7 +541,7 @@
             <a href="#skills" class="nav-link">Skills</a>
             <a href="#projects" class="nav-link">Projects</a>
             <a href="#contact" class="nav-link">Contact</a>
-            <!-- Download CV Button Trigger -->
+            <!-- 📄 Updated: Full "Download CV" text -->
             <a id="download-cv-btn" class="nav-cv-btn"><i class="fas fa-download"></i> Download CV</a>
         </nav>
     </header>
@@ -511,17 +552,16 @@
             <h1>Eshmam Ahmed Rofi</h1>
             <div class="text-animate">
                 <div class="text-animate-wrapper">
-                    <h3>Cyber Security Aspirant</h3>
-                    <h3>Robotics & Hardware Enthusiast</h3>
-                    <h3>Full-Stack & Frontend Developer</h3>
+                    <h3>Full-Stack Developer</h3>
+                    <h3>Frontend & UI/UX Designer</h3>
                 </div>
             </div>
-            <p>Aspiring Cyber Security and Robotics enthusiast seeking to leverage strong software development skills to build and secure intelligent hardware-software solutions.</p>
+            <p>Passionate Computer Science student and developer focused on building efficient, and user-centric software architectures.</p>
             
             <div class="social-media">
                 <a href="https://github.com/Eshmam62" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=esmamahmed00@gmail.com" target="_blank" title="Open Gmail"><i class="fas fa-envelope-open-text"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=esmamahmed00@gmail.com" target="_blank"><i class="fas fa-envelope-open-text"></i></a>
             </div>
             <a href="#contact" class="btn">Connect With Me</a>
         </div>
@@ -533,8 +573,8 @@
     <section class="about" id="about">
         <h2 class="heading">About <span>Me</span></h2>
         <div class="about-content">
-            <p>I am an aspiring CSE student specializing in <strong>Cyber Security (Major)</strong> and <strong>Robotics (Minor)</strong>, with 1 year of hands-on experience as a Freelance Developer. Proficient in full-stack development using Python, C++, C#, Java, and HTML, combined with frontend UI/UX design in Figma.</p>
-            <p style="margin-top: 15px;">I am adept at secure coding practices, hardware-software integration, and microprocessor prototyping to deliver secure, intelligent, and user-centric solutions. Always eager to solve real-world technical problems and secure future-generation infrastructures.</p>
+            <p>I am a dedicated CSE student proficient in developing software solutions with a solid command over programming logic using C++, C#, Java, Python, and frontend methodologies. Experienced in crafting professional interfaces using Figma and managing robust databases with SQL Server.</p>
+            <p style="margin-top: 15px;">My approach focuses on writing clean, reusable code, structuring optimal relational data structures, and ensuring intuitive UI/UX workflows to tackle complex management and functional software projects.</p>
             
             <ul class="about-info-list">
                 <li><i class="fas fa-university"></i> B.Sc. in Computer Science & Engineering - AIUB</li>
@@ -549,36 +589,7 @@
         <h2 class="heading">My <span>Skills</span></h2>
         <div class="skills-container">
             
-            <div class="skills-box" style="border-color: rgba(0, 242, 254, 0.3);">
-                <div class="skills-box-header">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Cyber Security (Major)</h3>
-                </div>
-                <div class="skill-info">
-                    <span>Focus Area</span>
-                    <span>Core Focus</span>
-                </div>
-                <div class="skill-bar-container">
-                    <div class="skill-bar-fill" style="width: 90%;"></div>
-                </div>
-                <p>Secure Coding Practices, Network & System Security, Vulnerability Assessment.</p>
-            </div>
-
-            <div class="skills-box" style="border-color: rgba(0, 242, 254, 0.3);">
-                <div class="skills-box-header">
-                    <i class="fas fa-robot"></i>
-                    <h3>Robotics (Minor)</h3>
-                </div>
-                <div class="skill-info">
-                    <span>Hardware Tech</span>
-                    <span>Core Focus</span>
-                </div>
-                <div class="skill-bar-container">
-                    <div class="skill-bar-fill" style="width: 85%;"></div>
-                </div>
-                <p>Hardware-Software Integration, Microprocessor Prototyping (Arduino), Circuit Design.</p>
-            </div>
-
+            <!-- 1. C# & .NET -->
             <div class="skills-box">
                 <div class="skills-box-header">
                     <i class="devicon-csharp-plain"></i>
@@ -594,6 +605,23 @@
                 <p>WinForms, Desktop Management System Applications, and OOP architecture.</p>
             </div>
 
+            <!-- 2. Java (🆕 Added Skill) -->
+            <div class="skills-box">
+                <div class="skills-box-header">
+                    <i class="devicon-java-plain"></i>
+                    <h3>Java</h3>
+                </div>
+                <div class="skill-info">
+                    <span>Proficiency</span>
+                    <span>75%</span>
+                </div>
+                <div class="skill-bar-container">
+                    <div class="skill-bar-fill" style="width: 75%;"></div>
+                </div>
+                <p>Object-Oriented Programming, modular software structures, and structural logic.</p>
+            </div>
+
+            <!-- 3. C++ -->
             <div class="skills-box">
                 <div class="skills-box-header">
                     <i class="devicon-cplusplus-plain"></i>
@@ -609,6 +637,7 @@
                 <p>Logical programming, algorithm problem solving, and structured logic.</p>
             </div>
 
+            <!-- 4. Python -->
             <div class="skills-box">
                 <div class="skills-box-header">
                     <i class="devicon-python-plain"></i>
@@ -624,6 +653,7 @@
                 <p>Full-Stack application scaling, script automation, and logic scripts.</p>
             </div>
 
+            <!-- 5. UI/UX Design -->
             <div class="skills-box">
                 <div class="skills-box-header">
                     <i class="devicon-figma-plain"></i>
@@ -639,6 +669,7 @@
                 <p>User-centric wireframes, modern dashboard layouts, and system interface prototypes.</p>
             </div>
 
+            <!-- 6. SQL Server -->
             <div class="skills-box">
                 <div class="skills-box-header">
                     <i class="fas fa-database"></i>
@@ -653,43 +684,29 @@
                 </div>
                 <p>Relational entity database design, secure data mapping, and queries.</p>
             </div>
+            
         </div>
     </section>
 
     <section class="projects" id="projects">
         <h2 class="heading">My GitHub <span>Projects</span></h2>
         <div class="project-container" id="github-projects">
-            <div class="loading-text">
-                <i class="fas fa-spinner fa-spin"></i> Fetching real-time projects from GitHub...
-            </div>
+            <div class="loading-text"><i class="fas fa-spinner fa-spin"></i> Fetching real-time projects from GitHub...</div>
         </div>
     </section>
 
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
         <div class="contact-container">
-            
             <a href="https://github.com/Eshmam62" target="_blank" class="contact-card">
-                <i class="fab fa-github"></i>
-                <h3>GitHub</h3>
-                <p>@Eshmam62</p>
-                <span class="action-text">View Repositories <i class="fas fa-arrow-right"></i></span>
+                <i class="fab fa-github"></i><h3>GitHub</h3><p>@Eshmam62</p><span class="action-text">View Repos <i class="fas fa-arrow-right"></i></span>
             </a>
-
             <a href="https://linkedin.com/" target="_blank" class="contact-card">
-                <i class="fab fa-linkedin-in"></i>
-                <h3>LinkedIn</h3>
-                <p>Connect Professionally</p>
-                <span class="action-text">Let's Connect <i class="fas fa-arrow-right"></i></span>
+                <i class="fab fa-linkedin-in"></i><h3>LinkedIn</h3><p>Connect Professionally</p><span class="action-text">Let's Connect <i class="fas fa-arrow-right"></i></span>
             </a>
-
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=esmamahmed00@gmail.com" target="_blank" class="contact-card">
-                <i class="fas fa-envelope"></i>
-                <h3>Email</h3>
-                <p>esmamahmed00@gmail.com</p>
-                <span class="action-text">Send Mail Directly <i class="fas fa-arrow-right"></i></span>
+                <i class="fas fa-envelope"></i><h3>Email</h3><p>esmamahmed00@gmail.com</p><span class="action-text">Send Mail <i class="fas fa-arrow-right"></i></span>
             </a>
-
         </div>
     </section>
 
@@ -701,32 +718,20 @@
         // Scrollspy Navigation Highlighter
         const sections = document.querySelectorAll("section");
         const navLinks = document.querySelectorAll(".navbar .nav-link");
-
-        const observerOptions = {
-            root: null,
-            rootMargin: "-30% 0px -60% 0px",
-            threshold: 0
-        };
+        const observerOptions = { root: null, rootMargin: "-30% 0px -60% 0px", threshold: 0 };
 
         const sectionObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const activeId = entry.target.getAttribute("id");
-                    
                     navLinks.forEach(link => {
                         link.classList.remove("active");
-                        if (link.getAttribute("href") === `#${activeId}`) {
-                            link.classList.add("active");
-                        }
+                        if (link.getAttribute("href") === `#${activeId}`) link.classList.add("active");
                     });
                 }
             });
         }, observerOptions);
-
-        sections.forEach(section => {
-            sectionObserver.observe(section);
-        });
-
+        sections.forEach(section => sectionObserver.observe(section));
 
         // GitHub Repos API Loader
         const githubUsername = "Eshmam62";
@@ -736,68 +741,45 @@
             try {
                 const response = await fetch(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=6`);
                 if (!response.ok) throw new Error("Failed to fetch data");
-                
                 const repos = await response.json();
                 projectsContainer.innerHTML = "";
-
                 if (repos.length === 0) {
                     projectsContainer.innerHTML = `<div class="loading-text">No public repositories found.</div>`;
                     return;
                 }
-
                 repos.forEach(repo => {
                     if (repo.fork) return;
                     const repoName = repo.name.replace(/-/g, " ");
                     const repoDesc = repo.description || "An innovative programming architecture project built with clean code practices.";
                     const mainLanguage = repo.language ? repo.language : "Code Base";
-
                     const projectCard = `
                         <div class="project-box">
-                            <div class="project-details">
-                                <h3>${repoName}</h3>
-                                <p>${repoDesc}</p>
-                            </div>
+                            <div class="project-details"><h3>${repoName}</h3><p>${repoDesc}</p></div>
                             <div class="project-footer">
-                                <div class="project-tech">
-                                    <span>${mainLanguage}</span>
-                                </div>
-                                <a href="${repo.html_url}" target="_blank" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
+                                <div class="project-tech"><span>${mainLanguage}</span></div>
+                                <a href="${repo.html_url}" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
                             </div>
-                        </div>
-                    `;
+                        </div>`;
                     projectsContainer.innerHTML += projectCard;
                 });
             } catch (error) {
-                console.error("Error fetching projects:", error);
-                projectsContainer.innerHTML = `<div class="loading-text" style="color: #ff4a4a;">Failed to load real-time repositories.</div>`;
+                projectsContainer.innerHTML = `<div class="loading-text" style="color: #ff4a4a;">Failed to load repositories.</div>`;
             }
         }
-
         window.addEventListener("DOMContentLoaded", fetchGitHubProjects);
 
-
-        // ---------------------------------------------------------------------------------
-        // 🚀 AUTOMATIC FORCE DOWNLOAD FROM GOOGLE DRIVE (READY CODE WITH YOUR FILE ID)
-        // ---------------------------------------------------------------------------------
+        // Google Drive Auto Downloader Setup
         document.getElementById("download-cv-btn").addEventListener("click", function(e) {
             e.preventDefault();
-            
-            // Your Google Drive file direct download link setup
             const googleDriveDirectLink = "https://docs.google.com/uc?export=download&id=1noYdT3DO9WYERFuJnet0-T27E8MBk-5z";
-            
-            // Creating an invisible anchor tag to trigger safe auto download
             const link = document.createElement("a");
             link.href = googleDriveDirectLink;
             link.setAttribute("download", "Eshmam_Ahmed_Rofi_Resume.pdf");
             link.style.display = "none";
-            
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
         });
     </script>
-
 </body>
 </html>
