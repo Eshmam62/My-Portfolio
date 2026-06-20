@@ -237,7 +237,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center 20%;
+            object-position: center 20%; /* অরিজিনাল পজিশন অবিকল ফিরিয়ে আনা হলো */
             border-radius: 50%;
         }
 
@@ -558,7 +558,7 @@
             gap: 15px;
             width: 100%;
             box-sizing: border-box;
-            overflow: hidden; /* প্রিভেন্ট কন্টেইনার ডিলিউশন */
+            overflow: hidden; 
         }
 
         .contact-card:hover {
@@ -578,7 +578,7 @@
             color: var(--text-main);
         }
 
-        /* ইমেইল এড্রেস বক্সের বাইরে যাওয়া আটকাতে চূড়ান্ত CSS রুলস */
+        /* ইমেইল এড্রেস বক্সের বাইরে যাওয়া আটকাতে রেসপন্সিভ রুলস */
         .contact-card p {
             font-size: 14px;
             color: var(--text-muted);
@@ -680,12 +680,14 @@
             .navbar a { margin-left: 0; font-size: 18px; width: 80%; text-align: center; }
             .navbar a.nav-cv-btn { justify-content: center; padding: 10px 24px; width: 60%; }
 
+            /* [FIX] মোবাইলে হেডার ওভারল্যাপ বা পিকচার এর ওপর লেখা চেপে যাওয়া ফিক্স */
             section { padding: 100px 5% 40px; min-height: auto; }
+            section.home { padding-top: 150px !important; } /* হেডার থেকে ছবিকে নিচে পুশ করার জন্য অতিরিক্ত স্পেস */
+            
             .heading { font-size: 28px; margin-bottom: 35px; }
             .home-content h1 { font-size: 32px; }
             .profile-img-box { width: 250px; height: 250px; }
             
-            /* মোবাইল ভিউপোর্টে গ্রিড কলাম ১ কলাম ফোর্সিং */
             .contact-container { grid-template-columns: 1fr; gap: 20px; }
             .contact-card { padding: 35px 20px; }
         }
@@ -694,6 +696,7 @@
             header { padding: 15px 4%; }
             .logo { font-size: 20px; }
             section { padding: 90px 4% 40px; }
+            section.home { padding-top: 135px !important; }
             .home-content h1 { font-size: 28px; }
             .home-content h3 { font-size: 18px; }
             .text-animate h3 { font-size: 16px; }
@@ -846,17 +849,17 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
     <script>
-        // Typed.js Engine Engine - জিমেইল এবং জাম্পিং গ্লিচ ১০০% ফিক্সড
+        // Typed.js Engine
         var typed = new Typed('#changing-text', {
             strings: [
                 'Cyber Security & Robotics Enthusiast', 
                 'Full-Stack Developer', 
                 'Secure Interface & Systems Developer'
             ],
-            typeSpeed: 50,        // টাইপিং স্পিড হালকা অপ্টিমাইজড
-            backSpeed: 25,        // ইরেজিং স্পিড 
-            startDelay: 100,      // ইনস্ট্যান্ট লোড এনহ্যান্সমেন্ট
-            backDelay: 1500,      // এক লাইন কমপ্লিট হওয়ার পরের বিরতি
+            typeSpeed: 50,        
+            backSpeed: 25,         
+            startDelay: 100,      
+            backDelay: 1500,      
             contentType: 'html',  
             loop: true
         });
